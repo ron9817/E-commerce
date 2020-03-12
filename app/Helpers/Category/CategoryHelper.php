@@ -14,6 +14,6 @@ class CategoryHelper
         }
         // dd($category);
         return $category;
-        
     }
+    
 }

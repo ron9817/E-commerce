@@ -12,6 +12,10 @@ class HomeController extends Controller
         $category=$catHelper->category();
         // ["Electronics","TVs & Appliances","Men","Women","Baby & Kids","Home & Furniture","Sports, Books & More"]
         return view("Home.index")->with("category",$category);
+    }
+
+    public function seller(Request $request, CategoryHelper $catHelper){
         
+        return view("Home.seller");
     }
 }

@@ -12,6 +12,10 @@
             @include('Home.partials.category_nav')
         </div>
     </div>
+
+    <div class="rwo">
+        <div class="col"></div>
+    </div>
 @endsection
 
     
