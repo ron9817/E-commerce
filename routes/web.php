@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "HomeController@index");
 Route::get('/seller', "HomeController@seller");
+Route::get('/login', "HomeController@login");

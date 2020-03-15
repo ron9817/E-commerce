@@ -18,4 +18,8 @@ class HomeController extends Controller
         
         return view("Home.seller");
     }
+
+    public function login(Request $request){
+        return view("login");
+    }
 }

@@ -37,6 +37,9 @@
     .w-40{
         width:40%!important;
     }
+    #nav-login-button{
+        width:10rem;
+    }
     /* .search-bar{
         flex:2;
     }
@@ -67,7 +70,7 @@
         </div>
         <div class="other-button">
             <div class="m-2 d-inline-block">
-                <button class="btn btn-light px-2 rounded-0 text-blue">Login</button>
+                <button class="btn btn-light px-2 rounded-0 text-blue" id="nav-login-button" data-toggle="modal" data-target="#login-modal">Login</button>
             </div>
             <div class="m-2 d-inline-block text-white">
                 More <i class="fa fa-angle-down" aria-hidden="true"></i>

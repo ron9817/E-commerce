@@ -10,6 +10,26 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+
+    window.$ = window.jQuery = require('jquery');
+    //require('bootstrap-sass');
+    require('bootstrap');
+    // require('bootstrap-datepicker');
+    // require('bootstrap-datetime-picker');
+    // require('jquery-ui');
+    // require("jquery-ui/ui/widgets/autocomplete");
+    // require("jquery-ui/ui/widgets/draggable");
+    // require("jquery-ui/ui/widgets/resizable");
+    // require("jquery-ui/ui/widgets/mouse");
+   	// window.moment = require('moment');
+    // require('fullcalendar');
+    //require('popper.js');
+    // require('jquery-slimscroll');
+    // window.c3 = require('c3');
+
+
+
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
