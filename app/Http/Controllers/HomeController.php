@@ -22,4 +22,9 @@ class HomeController extends Controller
     public function login(Request $request){
         return view("login");
     }
+
+    public function signin(Request $request){
+        dd($request->all());
+        return 1;
+    }
 }

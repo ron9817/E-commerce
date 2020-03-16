@@ -2,14 +2,18 @@
 @section('title', 'Home')
 @push('script')
 <script>
+    const nav_login_button="#nav-login-button";
+    const modal_login="#login-modal";
+    const form_login_button="#login-form-button";
+    const form_login="#login-form";
     $(document).ready(_=>{
-        $(document).on("click","#nav-login-button",function(){
+        $(document).on("click",nav_login_button,function(){
             axios.get('/login').then((data)=>{
-                $("#login-modal").html(data.data);
+                $(modal_login).html(data.data);
             });
         });
-        $(document).on("click","#login-form-button",function(){
-            let loginInfo=new FormData($("#login-form")[0])
+        $(document).on("click",form_login_button,function(){
+            let loginInfo=new FormData($(form_login)[0])
             axios.post('/sign-in',loginInfo).then(()=>{
 
             })
