@@ -8,6 +8,12 @@
                 $("#login-modal").html(data.data);
             });
         });
+        $(document).on("click","#login-form-button",function(){
+            let loginInfo=new FormData($("#login-form")[0])
+            axios.post('/sign-in',loginInfo).then(()=>{
+
+            })
+        })
     });
 </script>
 @endpush

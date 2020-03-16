@@ -9,7 +9,7 @@
                 <div class="image m-auto"></div>
             </div>
             <div class="col-7 p-5 right_hand_side bg-white">
-                <form>
+                <form id="login-form">
                     <div class="form-group">
                         <label for="email-number">Enter Email/Mobile Number</label>
                         <input type="text" name="email-number" class="form-control" id="email-number" placeholder="Enter Email/Mobile Number">
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button class="btn text-center p-2 login-button">Login</button>
+                        <button class="btn text-center p-2 login-button" type="button" id="login-form-button">Login</button>
                     </div>
                     <div class="form-group">
                         <div class="text-center">OR</div>
