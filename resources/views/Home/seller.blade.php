@@ -7,10 +7,19 @@
     }
     .nav .nav-item{
         border: none!important;
+        outline:none!important;
     }
     .nav .nav-item.nav-link{
         border: none!important;
         outline:none!important;
+        border-bottom:10px solid #dfgd;
+    }
+    .nav .nav-item.nav-link.active{
+        border: none!important;
+        outline:none!important;
+    }
+    .nav-tabs{
+        border-bottom:none!important;
     }
 </style>
 @endpush
