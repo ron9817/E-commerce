@@ -10,7 +10,10 @@ class CategoryHelper
         $categories=Category::all(["display_name"]);
         $category=[];
         foreach ($categories as $ckey => $cvalue) {
-            array_push($category,$cvalue->display_name);
+            array_push($category,[
+                'id'=>$cvalue->id,
+                'name'=>$cvalue->display_name
+                ]);
         }
         // dd($category);
         return $category;

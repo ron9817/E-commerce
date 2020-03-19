@@ -15,8 +15,8 @@ class HomeController extends Controller
     }
 
     public function seller(Request $request, CategoryHelper $catHelper){
-        
-        return view("Home.seller");
+        $category=$catHelper->category();
+        return view("Home.seller")->with("category",$category);
     }
 
     public function login(Request $request){

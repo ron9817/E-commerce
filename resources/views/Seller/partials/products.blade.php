@@ -28,7 +28,9 @@
                     <div class="form-group mt-2">
                         <label for="category">Select Category</label>
                         <select class="custom-select" id="category" name="category">
-                            <option value="1">One</option>
+                        @foreach($category as $c_key=>$cat)
+                            <option value="{{$cat['id']}}">{{$cat['name']}}</option>
+                        @endforeach
                         </select>
                     </div>
                     <div class="form-group">
