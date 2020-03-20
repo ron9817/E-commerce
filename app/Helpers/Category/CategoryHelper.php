@@ -7,7 +7,7 @@ use App\Models\Category;
 class CategoryHelper
 {
     public function category(){
-        $categories=Category::all(["display_name"]);
+        $categories=Category::all(["display_name","id"]);
         $category=[];
         foreach ($categories as $ckey => $cvalue) {
             array_push($category,[

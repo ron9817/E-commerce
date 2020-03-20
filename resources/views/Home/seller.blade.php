@@ -20,6 +20,22 @@
     }
 </style>
 @endpush
+@push('script')
+<script>
+    const button='#add_product-form-button';
+    const form="#add_product-form";
+    const url="/seller/add-product";
+    $(document).ready(()=>{
+        $(document).on("click",button,_=>{
+            const data=new FormData($(form)[0]);
+            axios.post(url,data).then(data=>{
+                console.log(data);
+            })
+        });
+
+    })
+</script>
+@endpush
 @section('body')
     <div class="row">
         <div class="col">
