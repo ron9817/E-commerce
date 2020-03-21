@@ -24,8 +24,10 @@
 <script>
     const button='#add_product-form-button';
     const form="#add_product-form";
+    const image_input=".custom-file";
     const url="/seller/add-product";
     $(document).ready(()=>{
+        $(document).on("click",image_input, change_label_to_image_name);
         $(document).on("click",button,_=>{
             const data=new FormData($(form)[0]);
             axios.post(url,data).then(data=>{
@@ -33,7 +35,10 @@
             })
         });
 
-    })
+    });
+    let change_label_to_image_name=function(){
+        $(this).children("label").html("working");
+    }
 </script>
 @endpush
 @section('body')

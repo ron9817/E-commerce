@@ -8,6 +8,8 @@ use App\Helpers\Category\CategoryHelper;
 
 use App\Models\Product;
 
+use Carbon\Carbon;
+
 class SellerController extends Controller
 {
     public function index(Request $request, CategoryHelper $catHelper){
@@ -21,16 +23,14 @@ class SellerController extends Controller
 
     public function addProduct(Request $request){
         // dd($request->all());
+        $seller_id=1;
         $product= new Product();
         $product->title=$request->title;
         $product->description=$request->description;
         $product->category_id=$request->category;
         $product->stock=$request->stock;
-        $product->seller_id=1;
-        $product->image="aa";
+        $product->seller_id=$seller_id;
+        $product->image=$request->file('image')->storeAs("Seller/".$seller_id,Carbon::now()->timestamp.".".$request->file('image')->getClientOriginalExtension());
         return $product->save();
-        dd($request->all());
-
-        return "1";
     }
 }
