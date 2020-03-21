@@ -24,20 +24,21 @@
 <script>
     const button='#add_product-form-button';
     const form="#add_product-form";
-    const image_input=".custom-file";
+    const image_input="#image";
     const url="/seller/add-product";
     $(document).ready(()=>{
-        $(document).on("click",image_input, change_label_to_image_name);
+        $(document).on("change",image_input, change_label_to_image_name);
         $(document).on("click",button,_=>{
             const data=new FormData($(form)[0]);
             axios.post(url,data).then(data=>{
                 console.log(data);
-            })
+            });
         });
 
     });
     let change_label_to_image_name=function(){
-        $(this).children("label").html("working");
+        const fileName=$(this).val().split('\\')[2];
+        $(this).parent("div").children("label").html(fileName);
     }
 </script>
 @endpush
