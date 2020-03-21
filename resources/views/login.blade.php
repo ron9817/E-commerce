@@ -14,7 +14,7 @@
                 <div class="form-group">
                     <label for="password">Enter Password</label>
                     <div>
-                        <input type="text" name="password" class="d-inline-block form-control" id="password" placeholder="Enter Password">
+                        <input type="text" name="password" class="d-inline-block form-control collapsed-view" id="password">
                         <span class="color-blue">Forgot?</span>
                     </div>
                 </div>
