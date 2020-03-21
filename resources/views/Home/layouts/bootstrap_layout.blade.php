@@ -12,6 +12,14 @@
     @stack('script')
     <style>
     /* login css */
+        .expanded-view{
+            transition: all 1s ease;
+            font-size: 12px;
+        }
+        input.collapsed-view{
+            transition:all 1s ease;
+            font-size:0px!important;
+        }
         .left_hand_side{
             background-color:#2874f0;
         }
@@ -79,16 +87,43 @@
             box-shadow:0 2px 4px 0 rgba(0,0,0,.2);
         }
         .modal-close{
-            font-size:20px;
+            font-size:25px;
             color:#fff;
             font-weight:700;
             cursor:pointer;
         }
+        .btn:hover{
+            color:#dcb444!important;
+        }
 
     </style>
+
+    <script>
+        const nav_login_button="#nav-login-button";
+        const modal_login="#login-modal";
+        const form_login_button="#login-form-button";
+        const form_login="#login-form";
+        $(document).ready(_=>{
+            $(document).on("click",nav_login_button,function(){
+                axios.get('/login').then((data)=>{
+                    $(modal_login).html(data.data);
+                });
+            });
+            $(document).on("click",form_login_button,function(){
+                let loginInfo=new FormData($(form_login)[0])
+                axios.post('/sign-in',loginInfo).then(()=>{
+
+                });
+            });
+            $(document).on("focus",".collapsed-view",function(){
+                $(this).removeClass("collapsed-view").parent("div").children("label").addClass("expanded-view");
+            });
+        });
+    </script>
 </head>
 <body>
     @yield('body')
+    <div id="login-modal" class="modal" tabindex="-1" role="dialog" aria-hidden="true"></div>
     {{--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>--}}

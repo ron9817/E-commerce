@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#add_product">  <i class="fa fa-angle-down" aria-hidden="true"></i> Add new product</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#add_product">  <i class="fa fa-plus" aria-hidden="true"></i> Add new product</button>
     </div>
 </div>
-<div class="row mx-0 my-2 {{--modal--}}" id="add_product">
-    <div class="col">
+<div class="modal" id="add_product">
+    <div class="d-flex justify-content-center mt-5">
         <div class="row">
             <div class="col-4 p-5 left_hand_side">
                 <div class="header">Add Product</div>
