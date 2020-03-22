@@ -12,13 +12,28 @@
     @stack('script')
     <style>
     /* login css */
-        .expanded-view{
-            transition: all 1s ease;
-            font-size: 12px;
+        .expanded-view label{
+            transition: all 500ms ease;
+            font-size: 0.7rem!important;
         }
-        input.collapsed-view{
-            transition:all 1s ease;
-            font-size:0px!important;
+        .expanded-view input{
+            transition: all 100ms ease;
+            font-size: 1.2rem;
+        }
+        label{
+            transition: all 500ms ease;
+            margin-bottom:0rem!important;
+        }
+        input{
+            transition: all 100ms ease;
+        }
+        .collapsed-view input{
+            transition:all 100ms ease;
+            font-size:  0.2rem!important;
+        }
+        .collapsed-view label{
+            transition:all 500ms ease;
+            font-size: 1.2rem!important;
         }
         .left_hand_side{
             background-color:#2874f0;
@@ -70,7 +85,10 @@
             padding-bottom:.5rem;
         }
         #password{
-            width:15rem;
+            width:75%;
+        }
+        .form-group.collapsed-view{
+            height:4rem!important;
         }
         .login-button{
             background-color:#fb641b;
@@ -116,7 +134,7 @@
                 });
             });
             $(document).on("focus",".collapsed-view",function(){
-                $(this).removeClass("collapsed-view").parent("div").children("label").addClass("expanded-view");
+                $(this).closest(".collapsed-view").removeClass("collapsed-view").addClass("expanded-view");
             });
         });
     </script>

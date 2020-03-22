@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center mt-5">
-    <div class="row m-0">
+    <div class="row m-0" style="width: 65rem;">
         <div class="col-4 p-5 left_hand_side">
             <div class="header">Login</div>
             <div class="text my-3">Get access to your Orders, Wishlist and Recommendations</div>
@@ -7,14 +7,14 @@
         </div>
         <div class="col-7 p-5 right_hand_side bg-white">
             <form id="login-form">
-                <div class="form-group">
+                <div class="form-group collapsed-view">
                     <label for="email-number">Enter Email/Mobile Number</label>
-                    <input type="text" name="email-number" class="form-control collapsed-view" id="email-number">
+                    <input type="text" name="email-number" class="form-control" id="email-number">
                 </div>
-                <div class="form-group">
+                <div class="form-group  collapsed-view">
                     <label for="password">Enter Password</label>
                     <div>
-                        <input type="text" name="password" class="d-inline-block form-control collapsed-view" id="password">
+                        <input type="text" name="password" class="d-inline-block form-control" id="password">
                         <span class="color-blue">Forgot?</span>
                     </div>
                 </div>

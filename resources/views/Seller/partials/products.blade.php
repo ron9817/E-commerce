@@ -5,7 +5,7 @@
 </div>
 <div class="modal" id="add_product">
     <div class="d-flex justify-content-center mt-5">
-        <div class="row">
+        <div class="row m-0" style="width: 65rem;">
             <div class="col-4 p-5 left_hand_side">
                 <div class="header">Add Product</div>
                 <div class="text my-3">Make your  product reach pan India</div>
@@ -15,11 +15,11 @@
                 <form id="add_product-form">
                     <div class="form-group">
                         <label for="title">Enter Title</label>
-                        <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title">
+                        <input type="text" name="title" class="form-control" id="title">
                     </div>
                     <div class="form-group">
                         <label for="description">Enter Description</label>
-                        <textarea name="description" class="form-control" id="description" placeholder="Enter Description"></textarea>
+                        <textarea name="description" class="form-control" id="description"></textarea>
                     </div>
                     <div class="form-group custom-file">
                         <label for="image" class="custom-file-label">Upload Image Products</label>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <label for="stock">Enter Stock</label>
-                        <input type="number" name="stock" class="form-control" id="stock" placeholder="Enter Stock">
+                        <input type="number" name="stock" class="form-control" id="stock">
                     </div>
                     <div class="form-group">
                         <button class="btn text-center p-2 login-button" type="button" id="add_product-form-button">Add Product</button>
