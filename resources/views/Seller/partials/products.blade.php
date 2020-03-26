@@ -3,6 +3,39 @@
         <button class="btn btn-primary" data-toggle="modal" data-target="#add_product">  <i class="fa fa-plus" aria-hidden="true"></i> Add new product</button>
     </div>
 </div>
+<div class="row my-3">
+    <div class="col">
+        <table class="table table-striped">
+            <thead class="thead-light">
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Images</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach ($products as $p_key=>$product)
+                <tr>
+                    <th scope="row">{{$loop->iteration}}</th>
+                    <td>{{$product['title']}}</td>
+                    <td class="text-justify">{{$product['description']}}</td>
+                    <td>{{$product['images']}}</td>
+                    <td>{{$product['category']}}</td>
+                    <td>{{$product['stock']}}</td>
+                    <td class="w-17p">
+                        <span class="badge badge-info mx-2"><i class="fa fa-edit mx-1"></i>Edit</span>
+                        <span class="badge badge-info mx-2"><i class="fa fa-trash mx-1"></i>Delete</span>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
 <div class="modal" id="add_product">
     <div class="d-flex justify-content-center mt-5">
         <div class="row m-0" style="width: 65rem;">

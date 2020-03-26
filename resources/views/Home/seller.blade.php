@@ -18,6 +18,19 @@
     .nav-tabs{
         border-bottom:none!important;
     }
+    .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+            background:#5b8ee0!important;
+            color:#fff;
+    }
+    .badge i{
+        font-size:15px!important;
+    }
+    .badge{
+        cursor:pointer;
+    }
+    .w-17p{
+        width:17%;
+    }
 </style>
 @endpush
 @push('script')
@@ -59,7 +72,7 @@
 
             </div>
             <div class="tab-content my-3">
-                <div class="tab-pane container active mx-0" id="product_data">
+                <div class="tab-pane container active" id="product_data">
                     @include('Seller.partials.products')
                 </div>
                 <div class="tab-pane container" id="order_data">
