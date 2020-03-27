@@ -18,6 +18,11 @@
                 </tr>
                 </thead>
                 <tbody>
+                @if(empty($products))
+                    <tr>
+                    <td colspan=7 class="text-center">No products available</td>
+                    </tr>
+                @endif
                 @foreach ($products as $p_key=>$product)
                 <tr>
                     <th scope="row">{{$loop->iteration}}</th>

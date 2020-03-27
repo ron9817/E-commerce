@@ -76,7 +76,7 @@
                     @include('Seller.partials.products')
                 </div>
                 <div class="tab-pane container" id="order_data">
-                    Order
+                    @include('Seller.partials.orders')
                 </div>
             </div>
         </div>

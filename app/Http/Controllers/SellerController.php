@@ -14,7 +14,7 @@ class SellerController extends Controller
         $seller_id=1;
         $category=$catHelper->category();
         $products=$productHelper->get($seller_id);
-        return view("Home.seller")->with("category",$category)->with("products",$products);
+        return view("Home.seller")->with("category",$category)->with("products",$products)->with("orders",[]);
     }
 
     public function login(Request $request){
