@@ -43,7 +43,6 @@
 </div>
 <div class="modal" id="add_product">
     <div class="d-flex justify-content-center mt-5">
-    
         <div class="row m-0" style="width: 65rem;">
             <div class="col-4 p-5 left_hand_side">
                 <div class="header">Add Product</div>
