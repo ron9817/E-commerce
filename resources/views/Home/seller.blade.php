@@ -31,6 +31,10 @@
     .w-17p{
         width:17%;
     }
+    .p-border{
+        border: all;
+        border-color:  #495057!important;
+    }
 </style>
 @endpush
 @push('script')

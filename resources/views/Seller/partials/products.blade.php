@@ -6,21 +6,22 @@
 <div class="row my-3">
     <div class="col">
         <table class="table table-striped">
-            <thead class="thead-light">
+            <thead class="thead-light text-center">
                 <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Images</th>
-                    <th>Category</th>
-                    <th>Stock</th>
-                    <th>Action</th>
+                    <th class="p-border">#</th>
+                    <th class="p-border">Title</th>
+                    <th class="p-border">Description</th>
+                    <th class="p-border">Images</th>
+                    <th class="p-border">Category</th>
+                    <th class="p-border">Stock</th>
+                    <th class="p-border">Price</th>
+                    <th class="p-border">Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 @if(empty($products))
                     <tr>
-                    <td colspan=7 class="text-center">No products available</td>
+                    <td colspan=8 class="text-center">No products available</td>
                     </tr>
                 @endif
                 @foreach ($products as $p_key=>$product)
@@ -31,6 +32,7 @@
                     <td>{{$product['images']}}</td>
                     <td>{{$product['category']}}</td>
                     <td>{{$product['stock']}}</td>
+                    <td>{{$product['price']}}</td>
                     <td class="w-17p">
                         <span class="badge badge-info mx-2"><i class="fa fa-edit mx-1"></i>Edit</span>
                         <span class="badge badge-info mx-2"><i class="fa fa-trash mx-1"></i>Delete</span>
@@ -74,6 +76,10 @@
                     <div class="form-group">
                         <label for="stock">Enter Stock</label>
                         <input type="number" name="stock" class="form-control" id="stock">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Enter Price</label>
+                        <input type="number" name="price" class="form-control" id="price">
                     </div>
                     <div class="form-group">
                         <button class="btn text-center p-2 login-button" type="button" id="add_product-form-button">Add Product</button>

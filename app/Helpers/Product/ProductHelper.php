@@ -20,7 +20,8 @@ class ProductHelper
                 'stock'=>$p->stock,
                 'category'=>$p->category->display_name,
                 'images'=>$p->image,
-                'description'=>$p->description
+                'description'=>$p->description,
+                'price'=>$p->price
             ]);
         }
         return $prod;
@@ -34,6 +35,7 @@ class ProductHelper
         $product->category_id=$request->category;
         $product->stock=$request->stock;
         $product->seller_id=$seller_id;
+        $product->price=$request->price;
         $product->image=$request->file('image')->storeAs("Seller/".$seller_id,Carbon::now()->timestamp.".".$request->file('image')->getClientOriginalExtension());
         return $product->save();
     }
