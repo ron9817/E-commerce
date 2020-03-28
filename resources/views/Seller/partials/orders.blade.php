@@ -3,15 +3,15 @@
         <table class="table table-striped">
             <thead class="thead-light">
                 <tr>
-                    <th>#</th>
-                    <th>Order id</th>
-                    <th>Product id</th>
-                    <th>Product name</th>
-                    <th>Quantity</th>
-                    <th>Cost</th>
-                    <th>Category</th>
-                    <th>Status</th>
-                    <th>Ready to dispatch</th>
+                    <th class="p-border">#</th>
+                    <th class="p-border">Order id</th>
+                    <th class="p-border">Product id</th>
+                    <th class="p-border">Product name</th>
+                    <th class="p-border">Quantity</th>
+                    <th class="p-border">Cost</th>
+                    <th class="p-border">Category</th>
+                    <th class="p-border">Status</th>
+                    <th class="p-border">Ready to dispatch</th>
                 </tr>
                 </thead>
                 <tbody>

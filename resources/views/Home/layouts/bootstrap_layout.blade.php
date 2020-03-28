@@ -113,24 +113,35 @@
         .btn:hover{
             color:#dcb444!important;
         }
+        .pointer{
+            cursor:pointer;
+        }
         
 
     </style>
 
     <script>
-        const nav_login_button="#nav-login-button";
+        const nav_login_button="#nav-login-button, #redirect-login-button";
+        const nav_register_button="#nav-register-button";
         const modal_login="#login-modal";
         const form_login_button="#login-form-button";
         const form_login="#login-form";
+        const form_register_button="#register-form-button";
+        const form_register="#register-form";
         $(document).ready(_=>{
             $(document).on("click",nav_login_button,function(){
                 axios.get('/login').then((data)=>{
                     $(modal_login).html(data.data);
                 });
             });
+            $(document).on("click",nav_register_button,function(){
+                axios.get('/register').then((data)=>{
+                    $(modal_login).html(data.data);
+                });
+            });
             $(document).on("click",form_login_button,function(){
                 let loginInfo=new FormData($(form_login)[0])
-                axios.post('/sign-in',loginInfo).then(()=>{
+                axios.post('/login',loginInfo).then(()=>{
 
                 });
             });

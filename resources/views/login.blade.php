@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center mt-5">
-    <div class="row m-0" style="width: 65rem;">
+    <div class="row m-0" style="width: 65rem; height:32rem;">
         <div class="col-4 p-5 left_hand_side">
             <div class="header">Login</div>
             <div class="text my-3">Get access to your Orders, Wishlist and Recommendations</div>
@@ -27,7 +27,7 @@
                 <div class="form-group">
                     <button class="btn text-center p-2 otp-button">Request OTP</button>
                 </div>
-                <div class="form-group mt-5">
+                <div class="form-group mt-5 pointer" id="nav-register-button">
                     <div class="text-center color-blue">New to Flipkart? Create an account</div>
                 </div>
             </form>

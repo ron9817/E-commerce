@@ -17,4 +17,6 @@ Route::get('/', "HomeController@index");
 Route::get('/seller', "SellerController@index");
 Route::post('/seller/add-product', "SellerController@addProduct");
 Route::get('/login', "HomeController@login");
-Route::post('/sign-in', "HomeController@signin");
+Route::post('/login', "HomeController@postLogin");
+Route::get('/register', "HomeController@getRegister");
+Route::post('/register', "HomeController@PostRegister");
