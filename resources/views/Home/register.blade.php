@@ -9,11 +9,11 @@
             <form id="register-form">
                 <div class="form-group collapsed-view">
                     <label for="email-number">Enter Email/Mobile Number</label>
-                    <input type="text" name="email-number" class="form-control" id="email-number">
+                    <input type="text" name="email_number" class="form-control" id="email-number">
                 </div>
                 <div class="form-group  collapsed-view">
                     <label for="password">Enter Password</label>
-                    <input type="text" name="password" class="form-control" id="password">
+                    <input type="password" name="password" class="form-control" id="password">
                 </div>
                 <div class="form-group">
                     <button class="btn text-center p-2 login-button" type="button" id="register-form-button">Register</button>

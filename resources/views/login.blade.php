@@ -9,12 +9,12 @@
             <form id="login-form">
                 <div class="form-group collapsed-view">
                     <label for="email-number">Enter Email/Mobile Number</label>
-                    <input type="text" name="email-number" class="form-control" id="email-number">
+                    <input type="text" name="email_number" class="form-control" id="email-number">
                 </div>
                 <div class="form-group  collapsed-view">
                     <label for="password">Enter Password</label>
                     <div>
-                        <input type="text" name="password" class="d-inline-block form-control" id="password">
+                        <input type="password" name="password" class="d-inline-block form-control" id="password">
                         <span class="color-blue">Forgot?</span>
                     </div>
                 </div>

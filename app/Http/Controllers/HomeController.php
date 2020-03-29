@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Helpers\Category\CategoryHelper;
+use App\Helpers\AuthHelper;
 
 class HomeController extends Controller
 {
@@ -23,16 +24,19 @@ class HomeController extends Controller
         return view("login");
     }
 
-    public function postLogin(Request $request){
-        dd($request->all());
-        return 1;
+    public function postLogin(Request $request, AuthHelper $auth){
+        $first_name=$request->email_number;
+        $password=$request->password;
+        return $auth->getPassword($first_name, $password);
     }
 
     public function getRegister(Request $request){
         return view('Home.register');
     }
 
-    public function postRegister(Request $request){
-        return view('Home.register');
+    public function postRegister(Request $request, AuthHelper $auth){
+        $first_name=$request->email_number;
+        $password=$request->password;
+        return $auth->register($first_name, $password);
     }
 }

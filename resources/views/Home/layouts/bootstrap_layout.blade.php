@@ -141,8 +141,14 @@
             });
             $(document).on("click",form_login_button,function(){
                 let loginInfo=new FormData($(form_login)[0])
-                axios.post('/login',loginInfo).then(()=>{
-
+                axios.post('/login',loginInfo).then((data)=>{
+                    console.log(data);
+                });
+            });
+            $(document).on("click",form_register_button,function(){
+                let registerInfo=new FormData($(form_register)[0])
+                axios.post('/register',registerInfo).then((data)=>{
+                    console.log(data);
                 });
             });
             $(document).on("focus",".collapsed-view",function(){
