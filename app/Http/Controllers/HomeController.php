@@ -39,4 +39,9 @@ class HomeController extends Controller
         $password=$request->password;
         return $auth->register($first_name, $password);
     }
+
+    public function getCategoryProduct(Request $request, CategoryHelper $cat, $category){
+        $products=$cat->getProduct($category);
+        return $products;
+    }
 }

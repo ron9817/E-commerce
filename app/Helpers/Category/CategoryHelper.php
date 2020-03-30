@@ -3,6 +3,7 @@
 namespace App\Helpers\Category;
 
 use App\Models\Category;
+use App\Models\Product;
 
 class CategoryHelper
 {
@@ -17,6 +18,12 @@ class CategoryHelper
         }
         // dd($category);
         return $category;
+    }
+
+    public function getProduct($category){
+        $products=Product::where('category_id',$category)->get();
+        dd($products);
+        return $products;
     }
     
 }
