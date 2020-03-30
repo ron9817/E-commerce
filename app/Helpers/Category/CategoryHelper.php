@@ -22,7 +22,6 @@ class CategoryHelper
 
     public function getProduct($category){
         $products=Product::where('category_id',$category)->get();
-        dd($products);
         return $products;
     }
     
