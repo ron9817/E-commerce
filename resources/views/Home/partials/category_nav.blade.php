@@ -19,9 +19,11 @@
 @endpush
 <div class="d-flex justify-content-around border-bottom-1 text-black text-bold">
 @foreach($category as $c_key=>$cat)
-    <div class="px-3 py-2">
-        <span class="fs-15">{{$cat['name']}}</span>
-        <i class="fa fa-angle-down text-off" aria-hidden="true"></i>
-    </div>
+    <a href="/category/{{$cat['id']}}">
+        <div class="px-3 py-2">
+            <span class="fs-15">{{$cat['name']}}</span>
+            <i class="fa fa-angle-down text-off" aria-hidden="true"></i>
+        </div>
+    </a>
 @endforeach
 </div>

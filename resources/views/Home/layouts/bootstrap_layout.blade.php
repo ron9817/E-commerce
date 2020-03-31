@@ -11,6 +11,9 @@
     @stack('css')
     @stack('script')
     <style>
+        a{
+            color: initial!important;
+        }
     /* login css */
         .expanded-view label{
             transition: all 500ms ease;
