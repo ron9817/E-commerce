@@ -21,7 +21,9 @@ class CategoryHelper
     }
 
     public function getProduct($category){
-        $products=Product::where('category_id',$category)->get();
+        $products=Product::with(['category'=> function ($query) use($category){
+            $query->where('display_name',$category);
+        }])->get();
         return $products;
     }
     

@@ -52,10 +52,10 @@
     <div class="d-flex justify-content-center py-2 ">
         <div class="logo mx-4 my-2">
             <a href="/">
-                <img width="85" src="logo.png" alt="Flipkart" title="Flipkart">
+                <img width="85" src="{{env('APP_URL')}}/logo.png" alt="Flipkart" title="Flipkart">
             </a>
             <div class="text">
-                <a class="" href="/">Explore <span class="">Plus </span><img width="10" src="plus.png"></a>
+                <a class="" href="{{env('APP_URL')}}/">Explore <span class="">Plus </span><img width="10" src="{{env('APP_URL')}}/plus.png"></a>
             </div>
         </div>
         <div class="search-bar w-40 mx-4 my-2">

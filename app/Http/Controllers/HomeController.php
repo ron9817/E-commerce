@@ -42,6 +42,7 @@ class HomeController extends Controller
 
     public function getCategoryProduct(Request $request, CategoryHelper $cat, $category){
         $products=$cat->getProduct($category);
-        return $products;
+        $category_list=$cat->category();
+        return view('Home.products')->with('category',$category_list)->with('category_name',$category);
     }
 }
