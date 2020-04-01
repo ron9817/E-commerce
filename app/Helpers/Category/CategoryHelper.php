@@ -20,10 +20,13 @@ class CategoryHelper
         return $category;
     }
 
-    public function getProduct($category){
-        $products=Product::with(['category'=> function ($query) use($category){
-            $query->where('display_name',$category);
-        }])->get();
+    public function getProduct($category=Null){
+        if(isset($seller_id))
+            $products=Product::with(['category:id,display_name'])->get();
+        else
+            $products=Product::with(['category'=> function ($query) use($category){
+                $query->where('display_name',$category);
+            }])->get();
         return $products;
     }
     
