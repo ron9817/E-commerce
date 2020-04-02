@@ -15,6 +15,11 @@
             @include('Home.partials.category_nav')
         </div>
     </div>
-@endsection
 
-    
+    <div class="row m-0">
+        <div class="col p-0">
+            @yield('content')
+        </div>
+    </div>
+
+@endsection

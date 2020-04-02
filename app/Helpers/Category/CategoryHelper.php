@@ -21,13 +21,22 @@ class CategoryHelper
     }
 
     public function getProduct($category=Null){
-        if(isset($seller_id))
+        if(!isset($category))
             $products=Product::with(['category:id,display_name'])->get();
         else
-            $products=Product::with(['category'=> function ($query) use($category){
+            $products=Product::whereHas('category',function ($query) use($category){
                 $query->where('display_name',$category);
-            }])->get();
+            })
+            ->with(['category:id,display_name'])
+            ->get();
         return $products;
+        // => function ($query) use($category){
+        //     $query->where('display_name',$category);
+        // }
+
+
+        // with(['category:id,display_name'])
+        //     ->where('category.display_name',$category)
     }
     
 }

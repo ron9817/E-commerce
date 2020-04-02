@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "HomeController@index");
 Route::get('/category/{category}', "HomeController@getCategoryProduct");
+Route::get('/product/{id}', "HomeController@getProductDetails");
 Route::get('/seller', "SellerController@index");
 Route::post('/seller/add-product', "SellerController@addProduct");
 Route::get('/login', "HomeController@login");
