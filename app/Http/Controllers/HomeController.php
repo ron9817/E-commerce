@@ -49,8 +49,9 @@ class HomeController extends Controller
         return view('Home.products')->with('category',$category_list)->with('category_name',$category)->with('products',$products);
     }
 
-    public function getProductDetails(Request $request, ProductHelper $productHelper, $id){
-        
-        return view('Home.index')->with('category',["a"=>["name"=>"d","id"=>"k"],"b"=>["name"=>"d","id"=>"k"]]);
+    public function getProductDetails(Request $request, ProductHelper $productHelper, CategoryHelper $catHelper, $id){
+        $category=$catHelper->category();
+        $product=$productHelper->get_detailed_product($id);
+        return view('Home.products')->with('category',$category)->with('products',$product);
     }
 }

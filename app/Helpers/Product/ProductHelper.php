@@ -39,5 +39,24 @@ class ProductHelper
         $product->image=$request->file('image')->storeAs("Seller/".$seller_id,Carbon::now()->timestamp.".".$request->file('image')->getClientOriginalExtension());
         return $product->save();
     }
+
+    public function get_detailed_product($product_id=NULL){
+        if(isset($product_id))
+            $products=Product::with(["category:id,display_name"])->where('id',$product_id)->get();
+        else
+            $products=Product::all();
+        $prod=[];
+        // foreach($products as $p_key=>$p){
+        //     array_push($prod,[
+        //         'title'=>$p->title,
+        //         'stock'=>$p->stock,
+        //         'category'=>$p->category->display_name,
+        //         'images'=>$p->image,
+        //         'description'=>$p->description,
+        //         'price'=>$p->price
+        //     ]);
+        // }
+        return $products;
+    }
     
 }
