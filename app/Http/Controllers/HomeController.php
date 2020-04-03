@@ -50,6 +50,7 @@ class HomeController extends Controller
     }
 
     public function getProductDetails(Request $request, ProductHelper $productHelper, $id){
-        return $id;
+        
+        return view('Home.index')->with('category',["a"=>["name"=>"d","id"=>"k"],"b"=>["name"=>"d","id"=>"k"]]);
     }
 }
