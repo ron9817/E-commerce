@@ -42,21 +42,19 @@ class ProductHelper
 
     public function get_detailed_product($product_id=NULL){
         if(isset($product_id))
-            $products=Product::with(["category:id,display_name"])->where('id',$product_id)->get();
-        else
-            $products=Product::all();
-        $prod=[];
-        // foreach($products as $p_key=>$p){
-        //     array_push($prod,[
-        //         'title'=>$p->title,
-        //         'stock'=>$p->stock,
-        //         'category'=>$p->category->display_name,
-        //         'images'=>$p->image,
-        //         'description'=>$p->description,
-        //         'price'=>$p->price
-        //     ]);
-        // }
-        return $products;
+            $product=Product::with(["category:id,display_name"])->find($product_id);
+        if(isset($product)){
+            return [
+                'id'=>$product->id,
+                'title'=>$product->title,
+                'stock'=>$product->stock,
+                'category'=>$product->category->display_name,
+                'images'=>$product->image,
+                'description'=>$product->description,
+                'price'=>$product->price
+            ];
+        }
+        return [];
     }
     
 }

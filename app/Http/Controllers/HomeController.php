@@ -52,6 +52,6 @@ class HomeController extends Controller
     public function getProductDetails(Request $request, ProductHelper $productHelper, CategoryHelper $catHelper, $id){
         $category=$catHelper->category();
         $product=$productHelper->get_detailed_product($id);
-        return view('Home.products')->with('category',$category)->with('products',$product);
+        return view('Home.product_detail')->with('category',$category)->with('product',$product);
     }
 }
