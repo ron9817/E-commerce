@@ -44,16 +44,19 @@
 @endpush
 
 @section('content')
-<div class="container my-2">
+<!-- <div class="container my-2"> -->
+<div>
 <div class="d-inline-block product-container-lhs">
     <div>
-        <div>l;l</div>
+     fmasfbasmnfbasmnfbsnfbasnfbmansbfnamsbfasbfmnasbfmnasbfmnasbfmnsa
     </div>  
+    <div>mfnasfnaslkfjsalkfjaslkj</div>
 </div>
 <div class="d-inline-block product-container-rhs">
     <div>
-    
+    <div>l;l</div>
     </div>
+</div>
 </div>
     <!-- <div class="d-inline-block product-container" data-id="{{$product['id']}}">
         <div class="image"></div>
@@ -68,7 +71,7 @@
         <div class="cost my-1"><span class="font-weight-bold">Cost:</span> <span>₹{{$product['price']}}/-</span></div>
         <div class="quantity my-1"><span class="font-weight-bold">Quantity:</span> <span>{{$product['stock']}}</span></div>
     </div> -->
-</div>
+<!-- </div> -->
 @endsection
 
     

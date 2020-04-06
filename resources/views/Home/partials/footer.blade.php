@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer mt-3">
 <div>
     <div>About Us</div>
     <div>Contact Us</div>
