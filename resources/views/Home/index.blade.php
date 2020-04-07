@@ -41,7 +41,7 @@
 
     <div class="row m-0">
         <div class="col p-0">
-            @include('Home.partials.footer')
+        <!-- @include('Home.partials.footer') -->
         </div>
     </div>
 
