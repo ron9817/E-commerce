@@ -80,6 +80,7 @@
             <div class="category my-1"><span class="font-weight-bold">Category:</span> <span>{{$product['category']}}</span></div>
             <div class="cost my-1"><span class="font-weight-bold">Cost:</span> <span>₹{{$product['price']}}/-</span></div>
             <div class="quantity my-1"><span class="font-weight-bold">Quantity:</span> <span>{{$product['stock']}}</span></div>
+            <div class="quantity my-1"><span class="font-weight-bold">Reviews:</span> <span>{{$product['stock']}}</span></div>
         </div>
     </div>
 </div>
