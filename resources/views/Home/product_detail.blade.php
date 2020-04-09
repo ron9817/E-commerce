@@ -52,11 +52,29 @@
 .product_container .rhs{
     width:60%;
 }
+.product_container .cost{
+    font-size:30px;
+    letter-spacing:.2rem;
+}
 .product_container .d-inline-block{
     vertical-align:top;
 }
 .product_container .lhs .button .w-50{
     width:13.6rem!important;
+}
+.breadcrumb{
+    background-color:transparent!important;
+    font-size:11px!important;
+    padding:0!important;
+}
+.breadcrumb li a{
+    color:#9d9696!important;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #9d9696;
+    content: ">";
 }
 </style>
 @endpush
@@ -76,11 +94,15 @@
         </div><!--
             keep this as it is for proper rendering
         --><div class="d-inline-block p-3 rhs">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/category/{{$product['category']}}">{{$product['category']}}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{Str::limit($product['title'],7)}}</li>
+                </ol>
+            </nav>
             <div class="title">{{$product['title']}}</div>
-            <div class="category my-1"><span class="font-weight-bold">Category:</span> <span>{{$product['category']}}</span></div>
-            <div class="cost my-1"><span class="font-weight-bold">Cost:</span> <span>₹{{$product['price']}}/-</span></div>
-            <div class="quantity my-1"><span class="font-weight-bold">Quantity:</span> <span>{{$product['stock']}}</span></div>
-            <div class="quantity my-1"><span class="font-weight-bold">Reviews:</span> <span>{{$product['stock']}}</span></div>
+            <div class="cost my-1 font-weight-bold">₹{{$product['price']}}</div>
         </div>
     </div>
 </div>
