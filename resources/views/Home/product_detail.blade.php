@@ -8,6 +8,19 @@
 //     const product_id=$(this).data('id');
 //     axios.get().then
 // });
+$(document).ready(_=>{
+    const buy="#buy_btn";
+    const cart="#add_cart_btn";
+
+    $(document).on("click",buy,()=>{
+        console.log("buy");
+    });
+
+    $(document).on("click",cart,()=>{
+        console.log("add to cart")        
+    });
+
+});
 </script>
 @endpush
 @push('css')
@@ -87,9 +100,9 @@
                 </div>
             </div>
             <div class="button mt-2">
-                <button class="btn d-inline-block w-50 py-3 mr-1 cart text-uppercase"><i class="fa fa-cart-plus text-white" aria-hidden="true"></i> add to cart</button><!--
+                <button class="btn d-inline-block w-50 py-3 mr-1 cart text-uppercase" id="add_cart_btn"><i class="fa fa-cart-plus text-white" aria-hidden="true"></i> add to cart</button><!--
                     keep this as it is for proper rendering
-                --><button class="btn d-inline-block w-50 py-3 ml-1 buy text-uppercase"><i class="fa fa-bolt text-white" aria-hidden="true"></i> buy now</button>
+                --><button class="btn d-inline-block w-50 py-3 ml-1 buy text-uppercase" id="buy_btn"><i class="fa fa-bolt text-white" aria-hidden="true"></i> buy now</button>
             </div>
         </div><!--
             keep this as it is for proper rendering
@@ -107,15 +120,3 @@
     </div>
 </div>
 @endsection
-
-    
-
-
-    <!-- <div>
-    <div class="d-inline-block product-container-lhs">
-            
-        </div>
-        <div class="d-inline-block product-container-rhs">
-            
-        </div>
-    </div> -->
