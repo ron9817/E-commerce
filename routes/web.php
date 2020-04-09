@@ -17,6 +17,7 @@ Route::get('/', "HomeController@index");
 Route::get('/category/{category}', "HomeController@getCategoryProduct");
 Route::get('/product/{id}', "HomeController@getProductDetails");
 Route::get('/seller', "SellerController@index");
+Route::get('/seller/dashboard', "SellerController@dashboard");
 Route::post('/seller/add-product', "SellerController@addProduct");
 Route::get('/login', "HomeController@login");
 Route::post('/login', "HomeController@postLogin");
