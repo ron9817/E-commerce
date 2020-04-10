@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Helpers\Category\CategoryHelper;
 use App\Helpers\AuthHelper;
 use App\Helpers\Product\ProductHelper;
+use Hash;
 
 class HomeController extends Controller
 {
@@ -30,7 +31,10 @@ class HomeController extends Controller
     public function postLogin(Request $request, AuthHelper $auth){
         $first_name=$request->email_number;
         $password=$request->password;
-        return $auth->getPassword($first_name);
+        $password_db=$auth->getPassword($first_name)->password;
+        if(Hash::check($password, $password_db))
+            return 1;
+        return 0;
     }
 
     public function getRegister(Request $request){
@@ -40,10 +44,7 @@ class HomeController extends Controller
     public function postRegister(Request $request, AuthHelper $auth){
         $first_name=$request->email_number;
         $password=$request->password;
-        $password_db=$auth->register($first_name, $password);
-        if($password==$password_db)
-            return true;
-        return false;
+        return $auth->register($first_name, $password);
     }
 
     public function getCategoryProduct(Request $request, CategoryHelper $cat, $category){
