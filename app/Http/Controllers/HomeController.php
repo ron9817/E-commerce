@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function postLogin(Request $request, AuthHelper $auth){
         $first_name=$request->email_number;
         $password=$request->password;
-        return $auth->getPassword($first_name, $password);
+        return $auth->getPassword($first_name);
     }
 
     public function getRegister(Request $request){
@@ -40,7 +40,10 @@ class HomeController extends Controller
     public function postRegister(Request $request, AuthHelper $auth){
         $first_name=$request->email_number;
         $password=$request->password;
-        return $auth->register($first_name, $password);
+        $password_db=$auth->register($first_name, $password);
+        if($password==$password_db)
+            return true;
+        return false;
     }
 
     public function getCategoryProduct(Request $request, CategoryHelper $cat, $category){
