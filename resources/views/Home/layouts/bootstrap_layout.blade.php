@@ -145,7 +145,9 @@
             $(document).on("click",form_login_button,function(){
                 let loginInfo=new FormData($(form_login)[0])
                 axios.post('/login',loginInfo).then((data)=>{
-                    console.log(data);
+                    if(data.data==1){
+                        location.reload(true);
+                    }
                 });
             });
             $(document).on("click",form_register_button,function(){
