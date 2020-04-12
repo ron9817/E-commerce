@@ -17,6 +17,7 @@
                 </div>
                 <div class="form-group">
                     <button class="btn text-center p-2 login-button" type="button" id="register-form-button">Register</button>
+                    <p class="m-1 text-center" id="error"></p>
                 </div>
                 <div class="form-group pointer" id="redirect-login-button">
                     <button type="button" class="btn text-center p-2 otp-button">Existing User? Login</button>

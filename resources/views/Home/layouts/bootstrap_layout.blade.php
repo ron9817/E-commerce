@@ -153,7 +153,12 @@
             $(document).on("click",form_register_button,function(){
                 let registerInfo=new FormData($(form_register)[0])
                 axios.post('/register',registerInfo).then((data)=>{
-                    console.log(data);
+                    if(data.data==1){
+                        location.reload(true);
+                    }
+                }).catch(err=>{
+                    $("#error").html("Cannot register try different username");
+                    console.log(err);
                 });
             });
             $(document).on("focus",".collapsed-view",function(){
