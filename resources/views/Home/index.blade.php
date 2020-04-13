@@ -2,7 +2,9 @@
 @section('title', 'Home')
 @push('script')
 <script>
-window.swal.fire("Hello");
+$(document).ready(_=>{
+    swal.fire("Hello");
+});
 </script>
 @endpush
 @push('css')
