@@ -14,6 +14,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     window.$ = window.jQuery = require('jquery');
     //require('bootstrap-sass');
     require('bootstrap');
+    window.swal=require('sweetalert2');
     // require('bootstrap-datepicker');
     // require('bootstrap-datetime-picker');
     // require('jquery-ui');

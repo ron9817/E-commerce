@@ -11,7 +11,7 @@
                     <label for="email-number">Enter Email/Mobile Number</label>
                     <input type="text" name="email_number" class="form-control" id="email-number">
                 </div>
-                <div class="form-group  collapsed-view">
+                <div class="form-group collapsed-view">
                     <label for="password">Enter Password</label>
                     <input type="password" name="password" class="form-control" id="password">
                 </div>

@@ -1,7 +1,9 @@
 @extends('Home.layouts.bootstrap_layout')
 @section('title', 'Home')
 @push('script')
-
+<script>
+window.swal.fire("Hello");
+</script>
 @endpush
 @push('css')
 <style>
