@@ -1,2 +1,14 @@
-College laravel workshop code.
-In this project I am developing a clone (partial clone) of flipkart.com in laravel. The main idea is to develop something big in laravel and learn and master the technology.
+This repository contains my attempt to clone flipkart.com in laravel in order to improve my skills and knowledge.
+The tech stack used to develop this project is LAMP stack.
+Some of css and js libraries used are bootstrap, jquer, axios, sweetalert2.
+
+Steps to setup the project:-
+1. Clone the repository.
+2. cd into project folder
+3. run `npm install`
+4. run `composer install`
+5. run `npm run dev`
+6. create database table and add database credentials to .env file
+
+Tips to debug setup errors:-
+1. Check if correct permissions are set.
