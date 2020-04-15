@@ -40152,7 +40152,11 @@ window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
 
-window.swal = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js"); // require('bootstrap-datepicker');
+window.swal = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+
+window.alert = function (msg) {
+  return swal.fire(msg);
+}; // require('bootstrap-datepicker');
 // require('bootstrap-datetime-picker');
 // require('jquery-ui');
 // require("jquery-ui/ui/widgets/autocomplete");

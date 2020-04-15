@@ -3,7 +3,8 @@
 @push('script')
 <script>
 $(document).ready(_=>{
-    swal.fire("Hello");
+    // swal.fire("Hello");
+    alert("Helllll");
 });
 </script>
 @endpush
