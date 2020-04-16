@@ -17,8 +17,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     window.swal=require('sweetalert2');
 
     window.alert=msg=>swal.fire({
-        title: msg,
+        title:"Alert",
+        text: msg,
         confirmButtonText: "Ok"    
+    });
+
+    window.confirm=msg=>swal.fire({
+        title: "Confirm",
+        text: msg,
+        confirmButtonText: "Yes",
+        showCancelButton: true   
     });
     // require('bootstrap-datepicker');
     // require('bootstrap-datetime-picker');
