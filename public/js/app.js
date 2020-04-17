@@ -40155,7 +40155,20 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 window.swal = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 
 window.alert = function (msg) {
-  return swal.fire(msg);
+  return swal.fire({
+    title: "Alert",
+    text: msg,
+    confirmButtonText: "Ok"
+  });
+};
+
+window.confirm = function (msg) {
+  return swal.fire({
+    title: "Confirm",
+    text: msg,
+    confirmButtonText: "Yes",
+    showCancelButton: true
+  });
 }; // require('bootstrap-datepicker');
 // require('bootstrap-datetime-picker');
 // require('jquery-ui');
