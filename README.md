@@ -8,6 +8,8 @@ Steps to setup the project:-
 3. run `npm install`
 4. run `composer install`
 5. run `npm run dev`
+7. Create a virtual host.
+8. Change the app url in env file according to the virtual host url.
 6. create database table and add database credentials to .env file
 
 Tips to debug setup errors:-
