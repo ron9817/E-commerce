@@ -23,3 +23,7 @@ Route::get('/login', "HomeController@login");
 Route::post('/login', "HomeController@postLogin");
 Route::get('/register', "HomeController@getRegister");
 Route::post('/register', "HomeController@PostRegister");
+Route::get('/seller/login', "SellerController@login");
+Route::post('/seller/login', "SellerController@postLogin");
+Route::get('/seller/register', "SellerController@getRegister");
+Route::post('/seller/register', "SellerController@PostRegister");
