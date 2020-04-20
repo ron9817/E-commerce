@@ -12,7 +12,7 @@ use Hash;
 class HomeController extends Controller
 {
     public function index(Request $request, CategoryHelper $catHelper){
-        dd(public_path());
+        // dd(public_path());
         $category=$catHelper->category();
         // ["Electronics","TVs & Appliances","Men","Women","Baby & Kids","Home & Furniture","Sports, Books & More"]
         // return view("Home.index")->with("category",$category);
