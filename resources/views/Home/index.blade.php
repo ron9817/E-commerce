@@ -4,7 +4,7 @@
 <script>
 $(document).ready(_=>{
     // swal.fire("Hello");
-    alert("Helllll");
+    // alert("Helllll");
 });
 </script>
 @endpush

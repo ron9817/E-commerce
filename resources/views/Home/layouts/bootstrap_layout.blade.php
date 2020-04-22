@@ -54,7 +54,7 @@
             font-size:18px;
         }
         .left_hand_side .image{
-            background-image: url("login.png");
+            background-image: url("{{env('APP_URL')}}/login.png");
             position:absolute;
             bottom:3rem;
             height: 8rem;

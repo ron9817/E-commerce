@@ -27,6 +27,7 @@ class SellerController extends Controller
 
     public function addProduct(Request $request, ProductHelper $productHelper){
         // dd($request->all());
+        return "1";
         return $productHelper->save($request);
     }
 }
