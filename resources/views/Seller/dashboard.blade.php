@@ -48,7 +48,8 @@
         $(document).on("click",button,_=>{
             const data=new FormData($(form)[0]);
             axios.post(url,data).then(data=>{
-                if (data.data==1){
+                console.log(data);
+                if (data.data.data==1){
                     location.reload();
                 }else{
                     alert("Error");
