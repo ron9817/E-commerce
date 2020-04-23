@@ -38,7 +38,8 @@ class ProductHelper
         $product->price=$request->price;
         $base_path="Seller/".$seller_id;
         $image_name=Carbon::now()->timestamp.".".$request->file('image')->getClientOriginalExtension();
-        $request->file('image')->storeAs(public_path($base_path),$image_name);
+        $op=$request->file('image')->storeAs(public_path($base_path),$image_name);
+        dd($op);
         $product->image=$base_path."/".$image_name;
         $product->save();
         return $product;
