@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeController@index");
 Route::get('/category/{category}', "HomeController@getCategoryProduct");
 Route::get('/product/{id}', "HomeController@getProductDetails");
+Route::get('/cart', "CartController@getCart");
+Route::post('/cart', "CartController@postCart");
 Route::get('/seller', "SellerController@index");
 Route::get('/seller/dashboard', "SellerController@dashboard");
 Route::post('/seller/add-product', "SellerController@addProduct");
