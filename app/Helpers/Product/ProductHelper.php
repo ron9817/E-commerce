@@ -28,6 +28,7 @@ class ProductHelper
     }
 
     public function save($request){
+        print_r ($request->hasfile('image'));
         $seller_id=1;
         $product= new Product();
         $product->title=$request->title;
@@ -38,7 +39,7 @@ class ProductHelper
         $product->price=$request->price;
         $base_path="Seller/".$seller_id;
         $image_name=Carbon::now()->timestamp.".".$request->file('image')->getClientOriginalExtension();
-        // $request->file('image')->storeAs(public_path($base_path),$image_name);
+        print_r($request->file('image')->storeAs($base_path,$image_name));
         $product->image=$base_path."/".$image_name;
         $product->save();
         return $product;
