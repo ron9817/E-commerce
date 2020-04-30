@@ -119,8 +119,9 @@
         .pointer{
             cursor:pointer;
         }
-        
-
+        .pointer{
+            cursor:pointer;
+        }
     </style>
 
     <script>

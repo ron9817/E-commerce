@@ -63,7 +63,7 @@
                     </div>
                     <div class="form-group custom-file">
                         <label for="image" class="custom-file-label">Upload Image Products</label>
-                        <input type="file" name="image" class="form-control custom-file-input" id="image">
+                        <input type="file" name="image" class="form-control custom-file-input pointer" id="image">
                     </div>
                     <div class="form-group mt-2">
                         <label for="category">Select Category</label>
