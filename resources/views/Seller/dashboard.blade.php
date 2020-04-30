@@ -50,6 +50,7 @@
             axios.post(url,data).then(data=>{
                 console.log(data);
                 if (data.data.data==1){
+                    alert(data);
                     location.reload();
                 }else{
                     alert("Error");

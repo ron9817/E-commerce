@@ -31,7 +31,7 @@ class SellerController extends Controller
 
         return [
             "data"=>1,
-            // "product"=>$product
+            "product"=>$product
         ];
     }
 }

@@ -36,7 +36,9 @@
     @foreach($products as $p_key=>$product)
     <a href="{{env('APP_URL')}}/product/{{$product->id}}">
         <div class="d-inline-block product-container p-3 m-4 pointer" data-id="{{$product->id}}">
-            <div class="image" style="background: {{env('APP_URL')}}/{{$product->image}}"></div>
+            <div class="image">
+                <img src="{{asset($product->image)}}">
+            </div>
             <div class="title">{{$product->title}}</div>
             <div class="category my-1"><span class="font-weight-bold">Category:</span> <span>{{$product->category->display_name}}</span></div>
             <div class="cost my-1"><span class="font-weight-bold">Cost:</span> <span>₹{{$product->price}}/-</span></div>
