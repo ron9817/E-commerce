@@ -44,11 +44,4 @@ $(document).ready(_=>{
         </div>
     </div>
 
-    <div class="row m-0">
-        <div class="col p-0">
-        <img src="{{ asset('storage/Seller/1/1584783919png') }}"/>
-        <!-- @include('Home.partials.footer') -->
-        </div>
-    </div>
-
 @endsection
