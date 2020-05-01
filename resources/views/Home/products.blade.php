@@ -21,6 +21,10 @@
     background-color: #d8d3d357;
     width:100%;
     height:20rem;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 .product-container:hover{
     box-shadow: 0 3px 16px 0 rgba(0,0,0,.11);
@@ -36,8 +40,8 @@
     @foreach($products as $p_key=>$product)
     <a href="{{env('APP_URL')}}/product/{{$product->id}}">
         <div class="d-inline-block product-container p-3 m-4 pointer" data-id="{{$product->id}}">
-            <div class="image">
-                <img src="{{asset($product->image)}}">
+            <div class="image" style="background-image:url({{asset($product->image)}})">
+                {{--<img src="{{asset($product->image)}}">--}}
             </div>
             <div class="title">{{$product->title}}</div>
             <div class="category my-1"><span class="font-weight-bold">Category:</span> <span>{{$product->category->display_name}}</span></div>
