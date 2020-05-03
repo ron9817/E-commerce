@@ -1,4 +1,5 @@
 <h1>E-Commerce</h1>
+<h2>Laravel</h2>
 This repository contains my attempt to clone flipkart.com in laravel in order to improve my skills and knowledge.
 The tech stack used to develop this project is LAMP stack.
 Some of css and js libraries used are bootstrap, jquer, axios, sweetalert2.
