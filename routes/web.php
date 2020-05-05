@@ -22,6 +22,8 @@ Route::get('/check-out', "CartController@getCheckOut");
 Route::get('/seller', "SellerController@index");
 Route::get('/seller/dashboard', "SellerController@dashboard");
 Route::post('/seller/add-product', "SellerController@addProduct");
+Route::get('/seller/add-product/{id}', "SellerController@getProduct");
+Route::post('/seller/add-product/{id}', "SellerController@editProduct");
 Route::get('/login', "HomeController@login");
 Route::post('/login', "HomeController@postLogin");
 Route::get('/register', "HomeController@getRegister");

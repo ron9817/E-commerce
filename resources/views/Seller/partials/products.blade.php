@@ -34,8 +34,8 @@
                     <td>{{$product['stock']}}</td>
                     <td>{{$product['price']}}</td>
                     <td class="w-17p">
-                        <span class="badge badge-info mx-2"><i class="fa fa-edit mx-1"></i>Edit</span>
-                        <span class="badge badge-info mx-2"><i class="fa fa-trash mx-1"></i>Delete</span>
+                        <span class="badge badge-info mx-2 product_edit_button" data-id="{{$loop->iteration}}"><i class="fa fa-edit mx-1"></i>Edit</span>
+                        <span class="badge badge-info mx-2 product_delete_button"><i class="fa fa-trash mx-1"></i>Delete</span>
                     </td>
                 </tr>
                 @endforeach

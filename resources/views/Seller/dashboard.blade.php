@@ -43,6 +43,9 @@
     const form="#add_product-form";
     const image_input="#image";
     const url="/seller/add-product";
+    const product={
+        edit:".product_edit_button"
+    };
     $(document).ready(()=>{
         $(document).on("change",image_input, change_label_to_image_name);
         $(document).on("click",button,_=>{
@@ -57,7 +60,13 @@
                 }
             }).catch(error=>alert("error"));
         });
-
+        $(document).on("click",product.edit,function(){
+            console.log($($("tr")[$(this).data('id')]).children("td").each(
+                function(){
+                    console.log($(this).text())
+                }
+            );
+        });
     });
     let change_label_to_image_name=function(){
         const fileName=$(this).val().split('\\')[2];
