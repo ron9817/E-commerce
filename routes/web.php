@@ -19,7 +19,7 @@ Route::get('/product/{id}', "HomeController@getProductDetails");
 Route::get('/cart', "CartController@getCart");
 Route::post('/cart', "CartController@postCart");
 Route::get('/check-out', "CartController@getCheckOut");
-Route::(t'/my-profile',function(){ return "my profile";});
+Route::(/my-profile',function(){ return "my profile";});
 
 Route::get('/seller', "SellerController@index");
 Route::get('/seller/dashboard', "SellerController@dashboard");
