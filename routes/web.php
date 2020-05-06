@@ -32,3 +32,5 @@ Route::get('/seller/login', "SellerController@login");
 Route::post('/seller/login', "SellerController@postLogin");
 Route::get('/seller/register', "SellerController@getRegister");
 Route::post('/seller/register', "SellerController@PostRegister");
+
+Route::get('/my-profile', function(){return "working";});
