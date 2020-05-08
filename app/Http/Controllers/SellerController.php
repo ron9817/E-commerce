@@ -34,4 +34,24 @@ class SellerController extends Controller
             "product"=>$product
         ];
     }
+
+    public function editProduct(Request $request, ProductHelper $productHelper){
+        // dd($request->all());
+        $product=$productHelper->save($request);
+
+        return [
+            "data"=>1,
+            "product"=>$product
+        ];
+    }
+
+    public function getProduct(Request $request, ProductHelper $productHelper){
+        // dd($request->all());
+        $product=$productHelper->save($request);
+
+        return [
+            "data"=>1,
+            "product"=>$product
+        ];
+    }
 }

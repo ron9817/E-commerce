@@ -61,9 +61,10 @@
             }).catch(error=>alert("error"));
         });
         $(document).on("click",product.edit,function(){
-            console.log($($("tr")[$(this).data('id')]).children("td").each(
+            const data= [];
+            $($("tr")[$(this).data('id')]).children("td").each(
                 function(){
-                    console.log($(this).text())
+                    data.push($(this).text());
                 }
             );
         });
