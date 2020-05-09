@@ -62,7 +62,7 @@
                         <textarea name="description" class="form-control" id="description"></textarea>
                     </div>
                     <div class="form-group custom-file">
-                        <label for="image" class="custom-file-label">Upload Image Products</label>
+                        <label for="image" id="image_label" class="custom-file-label">Upload Image Products</label>
                         <input type="file" name="image" class="form-control custom-file-input pointer" id="image">
                     </div>
                     <div class="form-group mt-2">

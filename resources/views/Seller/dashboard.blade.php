@@ -67,6 +67,13 @@
                     data.push($(this).text());
                 }
             );
+            $("#title").val(data[0]);
+            $("#description").val(data[1]);
+            $("#image_label").val(data[2]);
+            $("#category").val(1);
+            $("#stock").val(data[4]);
+            $("#price").val(data[5]);
+            $("#add_product").modal('show');
         });
     });
     let change_label_to_image_name=function(){
