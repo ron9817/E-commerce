@@ -69,7 +69,7 @@
             );
             $("#title").val(data[0]);
             $("#description").val(data[1]);
-            $("#image_label").val(data[2]);
+            $("#image_label").text(data[2]);
             $("#category").val(1);
             $("#stock").val(data[4]);
             $("#price").val(data[5]);
