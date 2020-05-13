@@ -44,6 +44,7 @@ class HomeController extends Controller
     }
 
     public function postRegister(Request $request, AuthHelper $auth){
+	// post register controller
         $first_name=$request->email_number;
         $password=$request->password;
         return $auth->register($first_name, $password);
