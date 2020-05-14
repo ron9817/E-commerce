@@ -39,6 +39,7 @@ class HomeController extends Controller
     }
 
     public function getRegister(Request $request){
+	//return register view
         return view('Home.register');
     }
 
