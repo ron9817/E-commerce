@@ -19,6 +19,6 @@ class CartController extends Controller
 
     public function postCart(Request $request){
         //, CartHelper $cartHelper){
-        return "Success";
+        return true;
     }
 }
