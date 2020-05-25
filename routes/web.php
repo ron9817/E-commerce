@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeController@index");
 Route::get('/category/{category}', "HomeController@getCategoryProduct");
 Route::get('/product/{id}', "HomeController@getProductDetails");
-Route::get('/cart', "CartController@getCart");
-Route::post('/cart', "CartController@postCart");
-Route::get('/check-out', "CartController@getCheckOut");
 Route::get('/seller', "SellerController@index");
 Route::get('/seller/dashboard', "SellerController@dashboard");
 Route::post('/seller/add-product', "SellerController@addProduct");
@@ -33,4 +30,8 @@ Route::post('/seller/login', "SellerController@postLogin");
 Route::get('/seller/register', "SellerController@getRegister");
 Route::post('/seller/register', "SellerController@PostRegister");
 
-Route::get('/my-profile', function(){return "show user account details here";});
+/*Route::get('/my-profile', function(){return "show user account details here";});
+Route::get('/cart', "CartController@getCart");
+Route::post('/cart', "CartController@postCart");
+Route::get('/check-out', "CartController@getCheckOut");*/
+
